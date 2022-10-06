@@ -5,7 +5,9 @@ const links = [
       label2: "Week2 notes",
       url2: "Week2/index.html",
       label3: "Week3 notes",
-      url3: "Week3/index.html"
+      url3: "Week3/index.html",
+      label4: "Week4 notes",
+      url4: "Week4/index.html"
     }
   ]
 
@@ -60,3 +62,20 @@ function loadIndexthree() {
   })
 }
 loadIndexthree()
+
+function loadIndexfour() {
+  const ol = document.querySelector("#linkslistfour");
+
+  links.forEach(link => {
+      const li = document.createElement("li");
+      const href = document.createElement("a");
+      href.setAttribute("href", link.url4);
+      href.innerText= link.label4;
+
+      li.appendChild(href);
+      ol.appendChild(li);
+
+      
+  })
+}
+loadIndexfour()
